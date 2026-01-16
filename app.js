@@ -38,7 +38,7 @@ app.engine("ejs",ejsMate);
 const store = new MongoStore({
     mongoUrl: dbUrl,
     crypto: {
-       secret:  process.env.SECERT
+       secret:  process.env.SECRET
     },
     touchAfter: 24*60*60,  
 });
@@ -49,7 +49,7 @@ store.on("error",function(e){
 
 const sessionOption = {
     store,
-    secret : process.env.SECERT,
+    secret : process.env.SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: {
