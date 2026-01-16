@@ -1,0 +1,123 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* full height of viewport */
+    
+    margin: 0;
+}
+
+.content-wrapped{
+    flex-grow :1; /* will take all the available space between navbar and footer */
+
+}
+
+.navbar{
+    height: 5rem;
+    background-color: hwb(313 52% 20%);
+}
+
+.fa-arrow-trend-up{
+    color: rgb(216, 16, 16);
+    font-size: 2rem;
+    
+}
+
+.nav-link {
+    color: #f7f6f3 !important ;
+}
+
+/* footer */
+.f-info-links a{
+    color: #1d1d1d !important;
+    text-decoration: none;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+    color: #1b1b1a;
+}
+
+
+.f-info-links,.f-info-socials , .f-info-brand {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.f-info-i{
+    margin-right: 2rem;
+}
+
+.f-info{
+    height: 8rem;
+    background-color: rgb(128, 125, 128);
+    display: flex; /* will make the content arrange in rows and column by default in rows */
+    flex-wrap: wrap; /* will allow the content to wrap into multiple rows if needed */
+    justify-content: center;
+    text-align: center;
+    align-items: space-evenly; /* will center the content vertically */
+    
+}
+
+.listing-card{
+    border: none !important;  /*remove border from card*/
+    margin-bottom: 2rem; /* add space between cards */
+    position: relative;
+    overflow: hidden; /* hide overflow to maintain rounded corners */
+}
+
+.card-img-top{
+  border-radius: 1rem !important; /* rounded corners for image */
+  width: 100% !important;
+  object-fit: cover !important; /* cover the entire card */
+}
+
+.card-body{
+    padding: 0!important; /* remove padding from card body */
+}
+.card-text p {
+    font-weight: 400 !important;
+}
+.listing-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* card effect */
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+.add-btn{
+    border: none !important;
+    background-color: hwb(313 31% 20%) !important;
+    font-weight: 500 !important;
+}
+
+.edit-btn{
+     border: none !important;
+    background-color: hwb(313 31% 20%) !important;
+    font-weight: 500 !important;
+
+}
+
+
+.show-img{
+   height: 30vh;
+   border: none !important;
+}
+
+
+/* map styles */
+#map {
+    height: 300px;
+    width: auto;
+    border-radius: 1rem;
+}
+
+

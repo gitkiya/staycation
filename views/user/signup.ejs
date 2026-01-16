@@ -1,0 +1,89 @@
+<% layout("/layout/boilerplate")%>
+
+<div class="row mt-3">
+    <h1 class="col-6 offset-3">SignUp on Staycation</h1>
+    <div class="col-6 offset-3">
+        <form action="/signup" method="POST" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username:</label>
+                <input  
+                name="username" 
+                id="username"
+                type="text"
+                class="form-control" 
+                required>
+                <div class="invalid-feedback">Please provide a username.</div>
+                <div class="valid-feedback">Username looks good!</div>
+
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input  
+                    name="email" 
+                    id="email"
+                    type="email"
+                    class="form-control" 
+                    required>
+                <div class="invalid-feedback">Please provide a valid email.</div>
+                <div class="valid-feedback">Email looks good!</div>
+
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password:</label>
+                <input  
+                name="password" 
+                id="password"
+                type="password"
+                class="form-control" 
+                required>
+                <div class="invalid-feedback">Please provide a password.</div>
+                <div class="valid-feedback">Password looks good!</div>
+
+            </div>
+            <div class="mb-3">
+                <label for="nationName" class="form-label">Country:</label>
+                <select id="nationName" name="nationName" class="form-select" required>
+                    <option value="" disabled selected>Select your country</option>
+                    <option value="United States" data-code="US">United States</option>
+                    <option value="India" data-code="IN">India</option>
+                    <option value="Canada" data-code="CA">Canada</option>
+                    <option value="United Kingdom" data-code="GB">United Kingdom</option>
+                    <option value="Australia" data-code="AU">Australia</option>
+                    <option value="Germany" data-code="DE">Germany</option>
+                    <option value="France" data-code="FR">France</option>
+                    <option value="Japan" data-code="JP">Japan</option>
+                    <option value="China" data-code="CN">China</option>
+                    <option value="Brazil" data-code="BR">Brazil</option>
+                    <option value="South Africa" data-code="ZA">South Africa</option>
+                    <option value="Mexico" data-code="MX">Mexico</option>
+                    <option value="Italy" data-code="IT">Italy</option>
+                    <option value="Spain" data-code="ES">Spain</option>
+                    <option value="Russia" data-code="RU">Russia</option>
+                    <option value="Netherlands" data-code="NL">Netherlands</option>
+                    <option value="Sweden" data-code="SE">Sweden</option>
+                    <option value="Switzerland" data-code="CH">Switzerland</option>
+                    <option value="New Zealand" data-code="NZ">New Zealand</option>
+                    <option value="Singapore" data-code="SG">Singapore</option>
+                    <option value="South Korea" data-code="KR">South Korea</option>
+                    <option value="Turkey" data-code="TR">Turkey</option>
+                    <option value="Argentina" data-code="AR">Argentina</option>
+                    <option value="Belgium" data-code="BE">Belgium</option>
+                    <option value="Norway" data-code="NO">Norway</option>
+                    <option value="Denmark" data-code="DK">Denmark</option>
+                    <option value="Vietnam" data-code="VN">Vietnam</option>
+                    <option value="Thailand" data-code="TH">Thailand</option>
+                    <option value="Philippines" data-code="PH">Philippines</option>
+                    <option value="Indonesia" data-code="ID">Indonesia</option>
+                    <option value="Malaysia" data-code="MY">Malaysia</option>
+                    <option value="Afghanistan" data-code="AF">Afghanistan</option>
+                    <option value="Albania" data-code="AL">Albania</option>
+                    <option value="Algeria" data-code="DZ">Algeria</option>
+                    <option value="Other" data-code="UN">Other</option>
+                </select>
+                <div class="invalid-feedback">Please provide your country.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+            
+        </form>
+    </div>
+</div>    
