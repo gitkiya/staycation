@@ -21,5 +21,5 @@ const initd = async () =>{
     await listing.insertMany(initdb.data);
     console.log("data inserted");
 }
-initd();
+//initd();
 
