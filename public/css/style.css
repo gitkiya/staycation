@@ -116,7 +116,7 @@ body{
 /* map styles */
 #map {
     height: 300px;
-    width: auto;
+    width: 100%;
     border-radius: 1rem;
 }
 
