@@ -38,6 +38,25 @@
             <div class="invalid-feedback">Please provide a country.</div>
          </div>
       </div>
+      <div class="mb-4">
+         <label for="category" class="form-label">Category:</label>
+         <select name="category" class="form-select" required>
+           <option value="" disabled >Select a category</option>
+           <option value="Iconic cities" <%= listing.category === "Iconic cities" ? "selected" : "" %>>Iconic Cities</option>
+           <option value="Beach" <%= listing.category === "Beach" ? "selected" : "" %>>Beach</option>
+           <option value="Mountain" <%= listing.category === "Mountain" ? "selected" : "" %>>Mountain</option>
+           <option value="Farms" <%= listing.category === "Farms" ? "selected" : "" %>>Farms</option>
+           <option value="Camping" <%= listing.category === "Camping" ? "selected" : "" %>>Camping</option>
+           <option value="Family house" <%= listing.category === "Family house" ? "selected" : "" %>>Family House</option>
+           <option value="Castle" <%= listing.category === "Castle" ? "selected" : "" %>>Castle</option>
+           <option value="Artic" <%= listing.category === "Artic" ? "selected" : "" %>>Artic</option>
+           <option value="Amusement parks" <%= listing.category === "Amusement parks" ? "selected" : "" %>>Amusement Parks</option>
+           <option value="Historical" <%= listing.category === "Historical" ? "selected" : "" %>>Historical</option>
+           <option value="Other" <%= listing.category === "Other" ? "selected" : "" %>>Other</option>
+         </select>
+         <div class="invalid-feedback">Please select a category.</div>
+       </div>
+
        <div class="mb-4">
          <label for="location" class="form-label">Location:</label>
          <input type="text" name="location" class="form-control" value="<%= listing.location %>" required>
