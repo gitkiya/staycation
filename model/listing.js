@@ -17,11 +17,11 @@ const ListingSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref:"Review"
       },
-   ],
+    ],
    owner:{
         type: Schema.Types.ObjectId,
         ref:"User"
-   },
+    },
    geometry:{
         type: {
             type: String, 
@@ -32,7 +32,11 @@ const ListingSchema = new Schema({
             type: [Number],
             required: true
         }
-   },
+    },
+    category: {
+        type: String,
+        enum: ["Trending", "Mountain", "Iconic Cities", "Rooms", "Castles", "Beach", "Farms", "Camping", "Family house", "Artic", "Amusement parks", "Historical", "Other"] // Match your tag names exactly!
+    }
   
 });
 
