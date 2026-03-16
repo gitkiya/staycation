@@ -4,8 +4,15 @@ const mapToken = process.env.MAP_TOKEN;
 const geocodingClient = mbxGeocoding({ accessToken: mapToken });
 
 module.exports.index = async(req,res)=>{
-    const allListing =  await Listing.find({});
-    res.render("listing/index.ejs",{allListing})
+    if(req.query.category){
+        const category = req.query.category;
+        const allListing = await Listing.find({category});
+        res.render("listing/index.ejs",{allListing})
+    }
+    else{
+        const allListing =  await Listing.find({});
+        res.render("listing/index.ejs",{allListing})
+    }
 }
 
 module.exports.newListingForm = (req,res)=>{
@@ -20,7 +27,7 @@ module.exports.createListing = async(req,res,next)=>{
         }).send();
        
         let { title, price, description, location, country } = req.body;
-        const list = new Listing({ title, price, description, location, country });
+        const list = new Listing({ title, price, description, location, country , category: req.body.category});
         list.owner = req.user._id;
         if(req.file){
             list.image = {
@@ -66,12 +73,13 @@ module.exports.editListingForm = async(req,res)=>{
 module.exports.updateListing = async(req,res)=>{
     
     const {id} = req.params;
-    let { title, price, description, location, country } = req.body; 
+    let { title, price, description, location,category, country } = req.body; 
     const updateField =  {
         title,
         price,
         description,
         location,
+        category,
         country,
     };
   
