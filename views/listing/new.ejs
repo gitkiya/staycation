@@ -35,6 +35,25 @@
             <input type="file"  name="image" class="form-control" required>
         </div>
         <div class="mb-4">
+            <label for="category" class="form-label">Category:</label>
+            <select name="category" class="form-select" required>
+              <option value="" disabled selected>Select a category</option>
+              <option value="Iconic cities">Iconic Cities</option>
+              <option value="Beach">Beach</option>
+              <option value="Mountain">Mountain</option>
+              <option value="Farms">Farms</option>
+              <option value="Camping">Camping</option>
+              <option value="Family house">Family House</option>
+              <option value="Castle">Castle</option>
+              <option value="Artic">Artic</option>
+              <option value="Amusement parks">Amusement Parks</option>
+              <option value="Historical">Historical</option>
+              <option value="Other">Other</option>
+            </select>
+            <div class="invalid-feedback">Please select a category.</div>
+
+        </div>
+        <div class="mb-4">
             <label for="location" class="form-label">Location:</label>
             <input type="text" placeholder="Jagashware,Uttarkhand" name="location" class="form-control" required>
             <div class="invalid-feedback">Please provide a location.</div>
