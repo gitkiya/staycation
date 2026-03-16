@@ -6,7 +6,8 @@ const Joi = require("joi");
         description:Joi.string().required(),
         image:Joi.string().allow('').allow(null),
         location:Joi.string().required(),
-        country:Joi.string().required()
+        country:Joi.string().required(),
+        category:Joi.string().valid("Trending", "Mountain", "Iconic Cities", "Castles", "Beach", "Farms", "Camping", "Family house", "Artic", "Amusement parks", "Historical", "Other").required()
     }).required();
 
 
