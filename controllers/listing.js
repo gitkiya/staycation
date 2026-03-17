@@ -15,11 +15,29 @@ module.exports.index = async(req,res)=>{
     }
 }
 
+module.exports.searchListing = async(req,res)=>{
+    console.log("Search query:", req.query.q);
+    const searchQuery = (req.query.q || "").trim();
+    if (!searchQuery) {
+        const allListing = await Listing.find({});
+        return res.render("listing/index.ejs", { allListing });
+    }
+    const allListing = await Listing.find({
+        $or: [
+            { title: { $regex: searchQuery, $options: 'i' } },
+            { location: { $regex: searchQuery, $options: 'i' } },
+            { country: { $regex: searchQuery, $options: 'i' } },
+            { description: { $regex: searchQuery, $options: 'i' } }
+        ]
+    });
+    res.render("listing/index.ejs", { allListing });
+}
+
 module.exports.newListingForm = (req,res)=>{
    res.render("listing/new.ejs");
 }
 
-module.exports.createListing = async(req,res,next)=>{
+module.exports.createListing = async(req,res,next)=>{   
    
         let responce = await geocodingClient.forwardGeocode({
             query: req.body.location,
