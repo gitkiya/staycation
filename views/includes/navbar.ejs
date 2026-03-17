@@ -32,8 +32,8 @@
       </div>
 
       <div class="navbar-nav ms-auto">
-          <form class="d-flex" role="search">
-            <input class="form-control me-2 search-inp" type="search" placeholder="Search destination" aria-label="Search"/>
+          <form class="d-flex" role="search" method="GET" action="/listings/find">
+            <input class="form-control me-2 search-inp" name="q" type="search" placeholder="Search destination" />
             <button class="btn  btn-search" type="submit">
               <i class="fa-brands fa-searchengin"></i>Search</button>
           </form>   
