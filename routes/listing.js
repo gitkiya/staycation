@@ -20,6 +20,9 @@ router
 //new route
 router.get("/new",isLoggedIn, listingController.newListingForm);
 
+//search route
+router.get("/find",wrapAsync(listingController.searchListing));
+
 
 
 //update and show and delete routes
