@@ -158,7 +158,7 @@ Deployed on **Render** using the free tier. Environment variables are configured
 
 **Kiran Pandey**
 - Twitter: [@Kiran426578](https://twitter.com/Kiran426578)
-- LinkedIn: [linkedin.com/in/kiran-pandey]((https://www.linkedin.com/in/kiran-pandey-8a8b423a2/))
+- LinkedIn: [linkedin.com/in/kiran-pandey](https://www.linkedin.com/in/kiran-pandey-8a8b423a2/)
 
 ---
 
